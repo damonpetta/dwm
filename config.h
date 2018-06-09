@@ -64,7 +64,7 @@ static const Rule rules[] = {
     { "st",           NULL,     NULL,                                 1 << 1,         0,          -1 },
     { "MAIL",         NULL,     NULL,                                 1 << 2,         0,          -1 },
     { "Slack",        NULL,     NULL,                                 1 << 9,         0,          -1 },
-    { NULL,           NULL,     "Google Hangouts - damon@petta.org",  1 << 5,         1,          -1 },
+    { NULL,           NULL,     "Google Hangouts",                    1 << 5,         1,          -1 },
     { "Lxappearance", NULL,     NULL,                                 0,              1,          -1 },
 };
 
