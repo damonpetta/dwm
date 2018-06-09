@@ -43,16 +43,16 @@ static const char colors[NUMCOLORS][MAXCOLORS][9] = {
 };
 
 static const char *tags[] = {
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " "
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
 };
 
 static const Rule rules[] = {
@@ -64,7 +64,7 @@ static const Rule rules[] = {
     { "st",           NULL,     NULL,                                 1 << 1,         0,          -1 },
     { "MAIL",         NULL,     NULL,                                 1 << 2,         0,          -1 },
     { "Slack",        NULL,     NULL,                                 1 << 9,         0,          -1 },
-    { NULL,           NULL,     "Google Hangouts - damon@petta.org",  1 << 5,         1,          -1 },
+    { NULL,           NULL,     "Google Hangouts",                    1 << 5,         1,          -1 },
     { "Lxappearance", NULL,     NULL,                                 0,              1,          -1 },
 };
 
@@ -161,7 +161,9 @@ static Key keys[] = {
     TAGKEYS(              XK_8,                  7)
     TAGKEYS(              XK_9,                  8)
     TAGKEYS(              XK_0,                  9)
-    { Mod1Mask|ShiftMask, XK_4,             spawn,              {.v = screenshot } },
+    {
+        Mod1Mask|ShiftMask, XK_4,             spawn,              {.v = screenshot }
+    },
     { MODKEY|ShiftMask,   XK_r,                  self_restart,       {0} },
     { MODKEY|ShiftMask,   XK_q,                  quit,               {0} },
     { 0,                  XK_Print,              spawn,              {.v = screenshot } },

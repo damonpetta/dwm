@@ -43,16 +43,16 @@ static const char colors[NUMCOLORS][MAXCOLORS][9] = {
 };
 
 static const char *tags[] = {
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " "
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
 };
 
 static const Rule rules[] = {
@@ -161,7 +161,9 @@ static Key keys[] = {
     TAGKEYS(              XK_8,                  7)
     TAGKEYS(              XK_9,                  8)
     TAGKEYS(              XK_0,                  9)
-    { Mod1Mask|ShiftMask, XK_4,             spawn,              {.v = screenshot } },
+    {
+        Mod1Mask|ShiftMask, XK_4,             spawn,              {.v = screenshot }
+    },
     { MODKEY|ShiftMask,   XK_r,                  self_restart,       {0} },
     { MODKEY|ShiftMask,   XK_q,                  quit,               {0} },
     { 0,                  XK_Print,              spawn,              {.v = screenshot } },
