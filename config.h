@@ -32,7 +32,7 @@ static const int topbar                     = 1;    /* 0 means bottom bar */
 static const char colors[NUMCOLORS][MAXCOLORS][9] = {
     // border    foreground background
     { "#f9f9f9", "#f5f5f5", "#03070b" }, // 0 = normal
-    { "#000000", "#f5f5f5", "#4b1a2c" }, // 1 = selected
+    { "#000000", "#f5f5f5", "#475971" }, // 1 = selected - #4b1a2c
     { "#b43030", "#f5f5f5", "#b23450" }, // 2 = red / urgent
     { "#212121", "#f5f5f5", "#14161A" }, // 3 = green / occupied
     { "#212121", "#ab7438", "#0b0606" }, // 4 = yellow
@@ -42,18 +42,7 @@ static const char colors[NUMCOLORS][MAXCOLORS][9] = {
     { "#212121", "#cfa696", "#0b0606" }, // 8 = grey
 };
 
-static const char *tags[] = {
-    " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " "
-};
+static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", " ", " " };
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -64,7 +53,7 @@ static const Rule rules[] = {
     { "st",           NULL,     NULL,                                 1 << 1,         0,          -1 },
     { "MAIL",         NULL,     NULL,                                 1 << 2,         0,          -1 },
     { "Slack",        NULL,     NULL,                                 1 << 9,         0,          -1 },
-    { NULL,           NULL,     "Google Hangouts",                    1 << 5,         1,          -1 },
+    { NULL,           NULL,     "Google Hangouts",                    0,              1,          -1 },
     { "Lxappearance", NULL,     NULL,                                 0,              1,          -1 },
 };
 
